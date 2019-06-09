@@ -9,7 +9,7 @@
  * @author Campo
  */
 public class RegistroAdministrador extends javax.swing.JFrame {
-
+      
     /**
      * Creates new form RegistroAdministrador
      */
@@ -29,71 +29,70 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         usuarioAdmin = new javax.swing.JLabel();
         textfieldAdmin = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        contraTXT = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
-        textfieldAdmin1 = new javax.swing.JTextField();
-        ubicacion = new javax.swing.JTextField();
+        nombreAdmin = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        ubicacion1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        ubicacionadmin = new javax.swing.JTextField();
+        guardarDatos = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         agregarFoto = new javax.swing.JButton();
         foto = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        crreoAdmin = new javax.swing.JTextField();
+        usuarioAdmin1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         usuarioAdmin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        usuarioAdmin.setText("Usuario:");
-        getContentPane().add(usuarioAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 95, 33));
+        usuarioAdmin.setText("Nombre:");
+        getContentPane().add(usuarioAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 95, 33));
 
         textfieldAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textfieldAdminActionPerformed(evt);
             }
         });
-        getContentPane().add(textfieldAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 170, 20));
+        getContentPane().add(textfieldAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 170, 20));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Contraseña:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 107, 33));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 107, 33));
 
-        jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 170, 20));
+        contraTXT.setText("jPasswordField1");
+        getContentPane().add(contraTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 170, 20));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Correo:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 107, 33));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 107, 33));
 
-        textfieldAdmin1.addActionListener(new java.awt.event.ActionListener() {
+        nombreAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textfieldAdmin1ActionPerformed(evt);
+                nombreAdminActionPerformed(evt);
             }
         });
-        getContentPane().add(textfieldAdmin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 170, 20));
-
-        ubicacion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ubicacionActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ubicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 250, 20));
+        getContentPane().add(nombreAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 230, 20));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setText("Ubicacion:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 107, 33));
 
-        ubicacion1.addActionListener(new java.awt.event.ActionListener() {
+        ubicacionadmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ubicacion1ActionPerformed(evt);
+                ubicacionadminActionPerformed(evt);
             }
         });
-        getContentPane().add(ubicacion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 250, 20));
+        getContentPane().add(ubicacionadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 250, 20));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Guardar datos");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, -1, -1));
+        guardarDatos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        guardarDatos.setText("Guardar datos");
+        guardarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarDatosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(guardarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText("Agregar Bar");
@@ -106,14 +105,19 @@ public class RegistroAdministrador extends javax.swing.JFrame {
                 agregarFotoActionPerformed(evt);
             }
         });
-        getContentPane().add(agregarFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
+        getContentPane().add(agregarFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
 
         foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/photo-placeholder.jpg"))); // NOI18N
-        getContentPane().add(foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 170, 130));
+        getContentPane().add(foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 170, 130));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel6.setText("Por favor, rellena con tu informacion personal los espacios en blanco.");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+        getContentPane().add(crreoAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 190, 20));
+
+        usuarioAdmin1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        usuarioAdmin1.setText("Usuario:");
+        getContentPane().add(usuarioAdmin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 95, 33));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -122,23 +126,26 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textfieldAdminActionPerformed
 
-    private void textfieldAdmin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfieldAdmin1ActionPerformed
+    private void nombreAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreAdminActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textfieldAdmin1ActionPerformed
+    }//GEN-LAST:event_nombreAdminActionPerformed
 
-    private void ubicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubicacionActionPerformed
+    private void ubicacionadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubicacionadminActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ubicacionActionPerformed
-
-    private void ubicacion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubicacion1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ubicacion1ActionPerformed
+    }//GEN-LAST:event_ubicacionadminActionPerformed
 
     private void agregarFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarFotoActionPerformed
         imagenNueva ventana = new imagenNueva();
         
 
     }//GEN-LAST:event_agregarFotoActionPerformed
+
+    private void guardarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarDatosActionPerformed
+   
+     
+     
+       
+    }//GEN-LAST:event_guardarDatosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,18 +184,19 @@ public class RegistroAdministrador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton agregarFoto;
+    private javax.swing.JPasswordField contraTXT;
+    private javax.swing.JTextField crreoAdmin;
     public static javax.swing.JLabel foto;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton guardarDatos;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPasswordField jPasswordField1;
+    public static javax.swing.JTextField nombreAdmin;
     private javax.swing.JTextField textfieldAdmin;
-    private javax.swing.JTextField textfieldAdmin1;
-    private javax.swing.JTextField ubicacion;
-    private javax.swing.JTextField ubicacion1;
+    public static javax.swing.JTextField ubicacionadmin;
     private javax.swing.JLabel usuarioAdmin;
+    private javax.swing.JLabel usuarioAdmin1;
     // End of variables declaration//GEN-END:variables
 }

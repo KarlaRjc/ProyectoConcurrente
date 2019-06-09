@@ -32,7 +32,6 @@ public class IngresaAdministrador extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         olvideContraAdmin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,14 +55,11 @@ public class IngresaAdministrador extends javax.swing.JFrame {
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 160, 30));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 160, 30));
 
-        jLabel3.setText("foto");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 100, 80));
-
         olvideContraAdmin.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         olvideContraAdmin.setText("olvide mi contraseña");
         jPanel1.add(olvideContraAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 380));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -107,7 +103,6 @@ public class IngresaAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
