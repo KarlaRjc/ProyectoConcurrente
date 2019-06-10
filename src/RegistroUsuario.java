@@ -87,7 +87,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
         jPanel1.add(agregarFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, -1, -1));
 
         foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/photo-placeholder.jpg"))); // NOI18N
-        jPanel1.add(foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 170, 130));
+        jPanel1.add(foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 170, 130));
 
         nombreTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +110,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
             }
         });
         jPanel1.add(acercaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 240, 80));
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 210, 30));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 220, 30));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setText("Ubicacion:");
