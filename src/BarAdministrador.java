@@ -61,59 +61,43 @@ public class BarAdministrador extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelNombre.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabelNombre.setText("Nombre");
-        jPanel1.add(jLabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         jLabelUbicacion.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabelUbicacion.setText("Ubicacion");
-        jPanel1.add(jLabelUbicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
 
         jLabelTelefono.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabelTelefono.setText("Telefono");
-        jPanel1.add(jLabelTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         jLabelParqueo.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabelParqueo.setText("Parqueo");
-        jPanel1.add(jLabelParqueo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, -1, -1));
 
         jLabelTipoDeMoneda.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabelTipoDeMoneda.setText("Tipo de moneda");
-        jPanel1.add(jLabelTipoDeMoneda, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 620, -1, -1));
 
         jTextFieldNombre.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jPanel1.add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 330, -1));
 
         jTextFieldTelefono.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jPanel1.add(jTextFieldTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 330, -1));
 
         Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SignoPregunta.jpg"))); // NOI18N
-        jPanel1.add(Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 250, 250));
 
         jTextAreaUbcacion.setColumns(20);
         jTextAreaUbcacion.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         jTextAreaUbcacion.setRows(5);
         jScrollPane1.setViewportView(jTextAreaUbcacion);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 350, 100));
-
         Parqueo.add(jRadioButtonParqueoSi);
         jRadioButtonParqueoSi.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jRadioButtonParqueoSi.setText("Si");
-        jPanel1.add(jRadioButtonParqueoSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, -1, -1));
 
         Parqueo.add(jRadioButtonParqueoNo);
         jRadioButtonParqueoNo.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jRadioButtonParqueoNo.setText("No");
-        jPanel1.add(jRadioButtonParqueoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, -1, -1));
 
         jButtonAI.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jButtonAI.setText("Agregar Imagen");
-        jPanel1.add(jButtonAI, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, -1, -1));
 
         jButtonAC.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jButtonAC.setText("Agregar comidas");
@@ -122,7 +106,6 @@ public class BarAdministrador extends javax.swing.JFrame {
                 jButtonACActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, -1, -1));
 
         jButtonAP.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jButtonAP.setText("Agregar promociones");
@@ -131,22 +114,18 @@ public class BarAdministrador extends javax.swing.JFrame {
                 jButtonAPActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonAP, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 420, -1, -1));
 
         Moneda.add(jRadioButtonTDMC);
         jRadioButtonTDMC.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jRadioButtonTDMC.setText("Colones");
-        jPanel1.add(jRadioButtonTDMC, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 670, -1, -1));
 
         Moneda.add(jRadioButtonTDMD);
         jRadioButtonTDMD.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jRadioButtonTDMD.setText("Dolares");
-        jPanel1.add(jRadioButtonTDMD, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 700, -1, -1));
 
         Moneda.add(jRadioButtonTDMA);
         jRadioButtonTDMA.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jRadioButtonTDMA.setText("Ambos");
-        jPanel1.add(jRadioButtonTDMA, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 730, -1, -1));
 
         Guardar.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         Guardar.setText("Guardar");
@@ -155,24 +134,142 @@ public class BarAdministrador extends javax.swing.JFrame {
                 GuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 730, -1, -1));
 
         Volver.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         Volver.setText("Volver");
-        jPanel1.add(Volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 730, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabel1.setText("Horario");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         jTextField1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 330, -1));
 
         jButton1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jButton1.setText("Modificar Datos");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 800));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelNombre)
+                    .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTelefono)
+                    .addComponent(jTextFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1)))
+                .addGap(140, 140, 140)
+                .addComponent(Imagen))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
+                .addComponent(jButtonAI))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabelUbicacion))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jButtonAC)
+                .addGap(13, 13, 13)
+                .addComponent(jButtonAP))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabelParqueo))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jRadioButtonParqueoSi))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jRadioButtonParqueoNo))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabelTipoDeMoneda)
+                .addGap(357, 357, 357)
+                .addComponent(jButton1))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jRadioButtonTDMC))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jRadioButtonTDMD))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jRadioButtonTDMA)
+                .addGap(176, 176, 176)
+                .addComponent(Guardar)
+                .addGap(25, 25, 25)
+                .addComponent(Volver))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelNombre)
+                        .addGap(19, 19, 19)
+                        .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabelTelefono)
+                        .addGap(19, 19, 19)
+                        .addComponent(jTextFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel1))
+                    .addComponent(Imagen))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jButtonAI)))
+                .addGap(19, 19, 19)
+                .addComponent(jLabelUbicacion)
+                .addGap(9, 9, 9)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonAC)
+                            .addComponent(jButtonAP))))
+                .addGap(30, 30, 30)
+                .addComponent(jLabelParqueo)
+                .addGap(19, 19, 19)
+                .addComponent(jRadioButtonParqueoSi)
+                .addGap(5, 5, 5)
+                .addComponent(jRadioButtonParqueoNo)
+                .addGap(5, 5, 5)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabelTipoDeMoneda))
+                    .addComponent(jButton1))
+                .addGap(29, 29, 29)
+                .addComponent(jRadioButtonTDMC)
+                .addGap(5, 5, 5)
+                .addComponent(jRadioButtonTDMD)
+                .addGap(5, 5, 5)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonTDMA)
+                    .addComponent(Guardar)
+                    .addComponent(Volver)))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
