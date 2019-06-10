@@ -106,7 +106,11 @@ public class IngresaUsuario extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+            .addGap(0, 319, Short.MAX_VALUE)
+>>>>>>> 7bcf80e88f665c762dd0381b54dd2cb8b48336e8
         );
 
         pack();
