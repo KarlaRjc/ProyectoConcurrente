@@ -1,10 +1,10 @@
 
  // @author Alison
  
-public class Configuracion_Admnistrador extends javax.swing.JFrame {
+public class Configuracion_Administrador extends javax.swing.JFrame {
 
  
-    public Configuracion_Admnistrador() {
+    public Configuracion_Administrador() {
         initComponents();
     }
 
@@ -29,7 +29,6 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
         espacioEscribir1 = new javax.swing.JTextField();
         espacioEscribir2 = new javax.swing.JTextField();
         combobox2 = new javax.swing.JComboBox();
-        imagen = new javax.swing.JLabel();
         txt1 = new javax.swing.JLabel();
         txt2 = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
@@ -39,6 +38,7 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cambiarFotoAdmi.setBackground(new java.awt.Color(255, 255, 255));
         cambiarFotoAdmi.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -49,6 +49,7 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
                 cambiarFotoAdmiActionPerformed(evt);
             }
         });
+        getContentPane().add(cambiarFotoAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 150, -1));
 
         cambiarUbiAdmi.setBackground(new java.awt.Color(255, 255, 255));
         cambiarUbiAdmi.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -59,6 +60,7 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
                 cambiarUbiAdmiActionPerformed(evt);
             }
         });
+        getContentPane().add(cambiarUbiAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 150, -1));
 
         cambiarContraAdmi.setBackground(new java.awt.Color(255, 255, 255));
         cambiarContraAdmi.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -69,6 +71,7 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
                 cambiarContraAdmiActionPerformed(evt);
             }
         });
+        getContentPane().add(cambiarContraAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 150, -1));
 
         cambiarNombreAdmi.setBackground(new java.awt.Color(255, 255, 255));
         cambiarNombreAdmi.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -79,6 +82,7 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
                 cambiarNombreAdmiActionPerformed(evt);
             }
         });
+        getContentPane().add(cambiarNombreAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 150, -1));
 
         cambiarCorreoAdmi.setBackground(new java.awt.Color(255, 255, 255));
         cambiarCorreoAdmi.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -89,6 +93,7 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
                 cambiarCorreoAdmiActionPerformed(evt);
             }
         });
+        getContentPane().add(cambiarCorreoAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 150, -1));
 
         cambiarMiBar.setBackground(new java.awt.Color(255, 255, 255));
         cambiarMiBar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -99,6 +104,7 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
                 cambiarMiBarActionPerformed(evt);
             }
         });
+        getContentPane().add(cambiarMiBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 150, -1));
 
         Actualizar_info2.setBackground(new java.awt.Color(255, 255, 255));
         Actualizar_info2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -109,6 +115,7 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
                 Actualizar_info2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Actualizar_info2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
 
         Regresar.setBackground(new java.awt.Color(255, 255, 255));
         Regresar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -119,199 +126,72 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
                 RegresarActionPerformed(evt);
             }
         });
+        getContentPane().add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, -1, -1));
 
         jLabel4.setText("Foto administrador");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 160, 110));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Mi ID");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 40, 20));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Configuraciones");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("(Número) ciclo");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 500));
 
         espacioEscribir1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 espacioEscribir1ActionPerformed(evt);
             }
         });
+        getContentPane().add(espacioEscribir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 220, -1));
 
         espacioEscribir2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 espacioEscribir2ActionPerformed(evt);
             }
         });
+        getContentPane().add(espacioEscribir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 220, -1));
 
         combobox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "San José", "Heredia", "Alajuela" }));
-
-        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Captura.PNG"))); // NOI18N
-        imagen.setText("jLabel7");
+        getContentPane().add(combobox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 130, 30));
 
         txt1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         txt1.setForeground(new java.awt.Color(51, 51, 51));
         txt1.setText("Escriba el nuevo nombre");
+        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
 
         txt2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         txt2.setForeground(new java.awt.Color(0, 0, 0));
         txt2.setText("Seleccione su nueva ubicación");
+        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, -1, -1));
 
         txt3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         txt3.setForeground(new java.awt.Color(0, 0, 0));
         txt3.setText("Confirmar contraseña");
+        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, -1, -1));
 
         txt4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         txt4.setForeground(new java.awt.Color(0, 0, 0));
         txt4.setText("Ingrese nueva contraseña");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, -1));
 
         txt5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         txt5.setForeground(new java.awt.Color(51, 51, 51));
         txt5.setText("Escriba el nuevo correo");
+        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
 
         panel.setBackground(new java.awt.Color(204, 255, 255));
         panel.setForeground(new java.awt.Color(102, 0, 255));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(cambiarNombreAdmi, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(cambiarCorreoAdmi, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(cambiarMiBar, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(cambiarFotoAdmi, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(cambiarContraAdmi))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(cambiarUbiAdmi, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(imagen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(Regresar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addComponent(combobox2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(txt4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(txt5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(txt1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(txt3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(espacioEscribir1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(Actualizar_info2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(txt2))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(espacioEscribir2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addGap(10, 10, 10)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(cambiarNombreAdmi)
-                .addGap(89, 89, 89)
-                .addComponent(cambiarCorreoAdmi)
-                .addGap(9, 9, 9)
-                .addComponent(cambiarMiBar))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(cambiarFotoAdmi))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(330, 330, 330)
-                .addComponent(cambiarContraAdmi))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel3))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(290, 290, 290)
-                .addComponent(cambiarUbiAdmi))
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(imagen, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(240, 240, 240)
-                .addComponent(Regresar))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(220, 220, 220)
-                .addComponent(combobox2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(txt4))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(txt5))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(txt1))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(250, 250, 250)
-                .addComponent(txt3))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(250, 250, 250)
-                .addComponent(espacioEscribir1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(300, 300, 300)
-                .addComponent(Actualizar_info2))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(230, 230, 230)
-                .addComponent(txt2))
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(espacioEscribir2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 390, 310));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 460, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -458,20 +338,21 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Configuracion_Admnistrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Configuracion_Administrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Configuracion_Admnistrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Configuracion_Administrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Configuracion_Admnistrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Configuracion_Administrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Configuracion_Admnistrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Configuracion_Administrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Configuracion_Admnistrador().setVisible(true);
+                new Configuracion_Administrador().setVisible(true);
             }
         });
     }
@@ -488,7 +369,6 @@ public class Configuracion_Admnistrador extends javax.swing.JFrame {
     private javax.swing.JComboBox combobox2;
     private javax.swing.JTextField espacioEscribir1;
     private javax.swing.JTextField espacioEscribir2;
-    private javax.swing.JLabel imagen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
