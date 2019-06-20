@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -42,18 +43,13 @@ public class EventoAdministradorAgregar extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<String>();
+        nombreEvento = new javax.swing.JTextField();
+        ubicacionEvento = new javax.swing.JTextField();
+        precioEvento = new javax.swing.JTextField();
+        capacidadEvento = new javax.swing.JTextField();
+        artistaEvento = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jButtonFoto1 = new javax.swing.JButton();
@@ -65,32 +61,81 @@ public class EventoAdministradorAgregar extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setText("AGREGA LA INFORMACION DE TU EVENTO");
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel2.setText("Nombre del evento");
-
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel3.setText("Ubicacion del evento");
-
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel4.setText("Precio del evento");
-
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel5.setText("Capacidad de personas");
-
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel6.setText("Artista en Evento");
-
         jLabel7.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel7.setText("Musica en Evento");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        if(nombreEvento.getText().length()==0){
+            nombreEvento.setText("Ingresa el nombre del evento");
+            nombreEvento.setForeground(new Color(150, 150, 150));
+        }
+        nombreEvento.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                nombreEventoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                nombreEventoFocusLost(evt);
+            }
+        });
+        nombreEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                nombreEventoActionPerformed(evt);
+            }
+        });
+
+        if(ubicacionEvento.getText().length()==0){
+            ubicacionEvento.setText("Ingresa la ubicacion del evento");
+            ubicacionEvento.setForeground(new Color(150, 150, 150));
+        }
+        ubicacionEvento.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                ubicacionEventoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                ubicacionEventoFocusLost(evt);
+            }
+        });
+
+        if(precioEvento.getText().length()==0){
+            precioEvento.setText("Ingresa el precio del evento");
+            precioEvento.setForeground(new Color(150, 150, 150));
+        }
+        precioEvento.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                precioEventoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                precioEventoFocusLost(evt);
+            }
+        });
+
+        if(capacidadEvento.getText().length()==0){
+            capacidadEvento.setText("Ingresa la capacidad de personas maxima del evento");
+            capacidadEvento.setForeground(new Color(150, 150, 150));
+        }
+        capacidadEvento.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                capacidadEventoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                capacidadEventoFocusLost(evt);
+            }
+        });
+
+        if(artistaEvento.getText().length()==0){
+            artistaEvento.setText("Ingresa el o la artista del evento");
+            artistaEvento.setForeground(new Color(150, 150, 150));
+        }
+        artistaEvento.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                artistaEventoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                artistaEventoFocusLost(evt);
             }
         });
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Electro", "Reguetton", "Rock", "Jazz", "Otro" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Electro", "Reguetton", "Rock", "Jazz", "Otro" }));
 
         jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1.setText("Guardar");
@@ -132,88 +177,72 @@ public class EventoAdministradorAgregar extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addGap(80, 80, 80)
                 .addComponent(jLabel1))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel2)
-                .addGap(179, 179, 179)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(90, 90, 90)
+                .addComponent(nombreEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel3)
-                .addGap(165, 165, 165)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(90, 90, 90)
+                .addComponent(ubicacionEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel4)
-                .addGap(189, 189, 189)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(90, 90, 90)
+                .addComponent(precioEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel5)
-                .addGap(141, 141, 141)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(90, 90, 90)
+                .addComponent(capacidadEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel6)
-                .addGap(192, 192, 192)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(90, 90, 90)
+                .addComponent(artistaEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel7)
-                .addGap(187, 187, 187)
+                .addGap(200, 200, 200)
+                .addComponent(jLabel7))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(190, 190, 190)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(190, 190, 190)
+                .addGap(210, 210, 210)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
                 .addComponent(jButtonFoto1)
-                .addGap(39, 39, 39)
+                .addGap(17, 17, 17)
                 .addComponent(jButtonFoto2)
-                .addGap(37, 37, 37)
+                .addGap(25, 25, 25)
                 .addComponent(jButtonFoto3))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(390, 390, 390)
+                .addGap(220, 220, 220)
                 .addComponent(jButton1))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addGap(48, 48, 48)
+                .addGap(28, 28, 28)
+                .addComponent(nombreEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(ubicacionEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(precioEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(capacidadEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(artistaEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel7)
+                .addGap(11, 11, 11)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel8)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
                     .addComponent(jButtonFoto1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonFoto2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonFoto3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addComponent(jButton1))
+                .addGap(30, 30, 30)
+                .addComponent(jButton1)
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -224,26 +253,26 @@ public class EventoAdministradorAgregar extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void nombreEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreEventoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_nombreEventoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
         if(AgregarFoto.insertaFoto == true){
-            agregaNombre = jTextField1.getText();
-            agregaUbicacion = jTextField2.getText();
-            agregaPrecio = Float.parseFloat(jTextField3.getText());
-            agregaCantidad = Integer.parseInt(jTextField4.getText());
-            agregaArtista = jTextField5.getText();
+            agregaNombre = nombreEvento.getText();
+            agregaUbicacion = ubicacionEvento.getText();
+            agregaPrecio = Float.parseFloat(precioEvento.getText());
+            agregaCantidad = Integer.parseInt(capacidadEvento.getText());
+            agregaArtista = artistaEvento.getText();
 
            EventoAdministrador obj1 = new EventoAdministrador(agregaNombre,agregaUbicacion,agregaCantidad,agregaPrecio,agregaArtista);
            EventoAdministradorVerEventos obj2 = new EventoAdministradorVerEventos();
@@ -290,7 +319,7 @@ public class EventoAdministradorAgregar extends javax.swing.JFrame {
 
     private void jButtonFoto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFoto3ActionPerformed
 
-        int resultado;
+       int resultado;
        File fichero3;
        AgregarFoto obj3= new AgregarFoto();
        FileNameExtensionFilter filtro = new FileNameExtensionFilter("JPG y PNG", "jpg", "png");
@@ -304,6 +333,87 @@ public class EventoAdministradorAgregar extends javax.swing.JFrame {
          }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonFoto3ActionPerformed
+
+    private void nombreEventoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreEventoFocusGained
+
+          nombreEvento.setText("");
+        nombreEvento.setForeground(new Color(50, 50, 50)); 
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreEventoFocusGained
+
+    private void nombreEventoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreEventoFocusLost
+
+         if(nombreEvento.getText().length()==0){
+            nombreEvento.setText("Ingresa el nombre del evento");
+            nombreEvento.setForeground(new Color(150, 150, 150)); 
+        } 
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreEventoFocusLost
+
+    private void ubicacionEventoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubicacionEventoFocusGained
+      ubicacionEvento.setText("");
+      ubicacionEvento.setForeground(new Color(50, 50, 50)); 
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ubicacionEventoFocusGained
+
+    private void ubicacionEventoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubicacionEventoFocusLost
+        
+         if(ubicacionEvento.getText().length()==0){
+           ubicacionEvento.setText("Ingresa la ubicacion del evento");
+          ubicacionEvento.setForeground(new Color(150, 150, 150)); 
+        } 
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ubicacionEventoFocusLost
+
+    private void precioEventoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_precioEventoFocusGained
+         precioEvento.setText("");
+         precioEvento.setForeground(new Color(50, 50, 50)); 
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_precioEventoFocusGained
+
+    private void precioEventoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_precioEventoFocusLost
+          if(precioEvento.getText().length()==0){
+           precioEvento.setText("Ingresa el precio del evento");
+          precioEvento.setForeground(new Color(150, 150, 150)); 
+        } 
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_precioEventoFocusLost
+
+    private void artistaEventoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_artistaEventoFocusGained
+        artistaEvento.setText("");
+         artistaEvento.setForeground(new Color(50, 50, 50)); 
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_artistaEventoFocusGained
+
+    private void capacidadEventoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_capacidadEventoFocusGained
+
+         capacidadEvento.setText("");
+         capacidadEvento.setForeground(new Color(50, 50, 50)); 
+        // TODO add your handling code here:
+    }//GEN-LAST:event_capacidadEventoFocusGained
+
+    private void capacidadEventoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_capacidadEventoFocusLost
+
+         if(capacidadEvento.getText().length()==0){
+          capacidadEvento.setText("Ingresa la capacidad de personas maxima del evento");
+          capacidadEvento.setForeground(new Color(150, 150, 150)); 
+        } 
+        // TODO add your handling code here:
+    }//GEN-LAST:event_capacidadEventoFocusLost
+
+    private void artistaEventoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_artistaEventoFocusLost
+          if(artistaEvento.getText().length()==0){
+          artistaEvento.setText("Ingresa el o la artista del evento");
+         artistaEvento.setForeground(new Color(150, 150, 150)); 
+        } 
+        // TODO add your handling code here:
+    }//GEN-LAST:event_artistaEventoFocusLost
 
     /**
      * @param args the command line arguments
@@ -341,24 +451,19 @@ public class EventoAdministradorAgregar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField artistaEvento;
+    private javax.swing.JTextField capacidadEvento;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonFoto1;
     private javax.swing.JButton jButtonFoto2;
     private javax.swing.JButton jButtonFoto3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField nombreEvento;
+    private javax.swing.JTextField precioEvento;
+    private javax.swing.JTextField ubicacionEvento;
     // End of variables declaration//GEN-END:variables
 }
