@@ -211,7 +211,7 @@ public class PerfilUsuario extends javax.swing.JFrame {
 
     private void nombreUSUARIOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreUSUARIOActionPerformed
       
-      nombreUSUARIO.setText(RegistroUsuario.nombre);
+      nombreUSUARIO.setText(RegistroUsuario.nombre);  
         
         
     }//GEN-LAST:event_nombreUSUARIOActionPerformed
